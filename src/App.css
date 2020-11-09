@@ -1,38 +1,39 @@
-.App {
+/* .App {
+  font-family: sans-serif;
   text-align: center;
+  font-size: 22px;
+  padding: 100px 50px 50px;
+} */
+
+/* DAY ONE STYLES */
+.user-deets {
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-deets img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-deets a {
+  text-decoration: none;
+  color: #40a8f3;
+  transition: 0.3s ease color;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.user-deets a:hover {
+  text-decoration: underline;
 }
 
-.App-link {
-  color: #61dafb;
+.user-deets h3 {
+  font-size: 50px;
+  margin: 0 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-deets strong {
+  display: block;
+  font-size: 14px;
+  opacity: 0.4;
+  margin-bottom: 6px;
 }

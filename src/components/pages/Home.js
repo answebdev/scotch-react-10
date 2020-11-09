@@ -1,24 +1,43 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Container, Button } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <Fragment>
-      <div style={{ marginTop: '40px' }}>
-        <strong>Scotch React Challenges</strong>
+    <Container>
+      <div style={{ marginTop: '40px', textAlign: 'center' }}>
+        <h2>
+          <strong>Scotch React Challenges</strong>
+        </h2>
         <p>
-          To learn about the challenge, click
+          To learn about the challenge, click&nbsp;
           <a
-            className='click'
             href='https://scotch.io/courses/10-react-challenges-beginner'
             rel='noopener noreferrer'
             target='_blank'
           >
-            &nbsp;here
+            here
           </a>
           .
         </p>
+        <hr />
+        <div style={{ textAlign: 'left' }}>
+          <h3>
+            <strong>Challenges</strong>
+          </h3>
+          <p>
+            <strong>Day 1:</strong> Display Simple Data with JSX&nbsp;&nbsp;
+            <Button
+              variant='outline-primary'
+              size='sm'
+              href='/display-simple-data-with-jsx'
+              style={{ marginRight: '5px' }}
+            >
+              View
+            </Button>
+          </p>
+        </div>
       </div>
-    </Fragment>
+    </Container>
   );
 };
 
