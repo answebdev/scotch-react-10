@@ -32,7 +32,7 @@ const Home = () => {
               href='/display-simple-data-with-jsx'
               style={{ marginRight: '5px' }}
             >
-              View
+              View <i class='fas fa-eye'></i>
             </Button>
           </p>
         </div>
