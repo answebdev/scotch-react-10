@@ -27,9 +27,21 @@ const Home = () => {
           <p>
             <strong>Day 1:</strong> Display Simple Data with JSX&nbsp;&nbsp;
             <Button
-              variant='outline-primary'
+              variant='primary'
               size='sm'
               href='/display-simple-data-with-jsx'
+              style={{ marginRight: '5px' }}
+            >
+              View <i class='fas fa-eye'></i>
+            </Button>
+          </p>
+          <p>
+            <strong>Day 2:</strong> Loop Over and Display Data with
+            JSX&nbsp;&nbsp;
+            <Button
+              variant='primary'
+              size='sm'
+              href='/loop-over-and-display-data-with-jsx'
               style={{ marginRight: '5px' }}
             >
               View <i class='fas fa-eye'></i>

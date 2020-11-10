@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-// import One from '../styles/One.css';
 
 const user = {
   name: 'Chris on Code',
@@ -63,7 +62,6 @@ const One = () => {
           <p>
             See the sandbox here&nbsp;
             <a
-              className='click'
               href='https://codesandbox.io/s/4q3nk5kxo7?file=/src/styles.css:0-531'
               rel='noopener noreferrer'
               target='_blank'
@@ -74,29 +72,8 @@ const One = () => {
           </p>
         </div>
       </div>
-      {/* <div style={{ marginTop: '40px', textAlign: 'center' }}>
-        <h2>
-          <strong>Scotch React Challenges</strong>
-        </h2>
-        <p>Day One</p>
-        <p>
-          See the sandbox here&nbsp;
-          <a
-            className='click'
-            href='https://codesandbox.io/s/4q3nk5kxo7?file=/src/styles.css:0-531'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            here
-          </a>
-          .
-        </p>
-        <br />
-      </div> */}
     </Container>
   );
 };
 
 export default One;
-// const rootElement = document.getElementById('root');
-// ReactDOM.render(<App />, rootElement);
