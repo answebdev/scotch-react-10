@@ -47,6 +47,18 @@ const Home = () => {
               View <i class='fas fa-eye'></i>
             </Button>
           </p>
+          <p>
+            <strong>Day 3:</strong> Use React State to Update the DOM
+            JSX&nbsp;&nbsp;
+            <Button
+              variant='primary'
+              size='sm'
+              href='/use-react-state-to-update-the-dom'
+              style={{ marginRight: '5px' }}
+            >
+              View <i class='fas fa-eye'></i>
+            </Button>
+          </p>
         </div>
       </div>
     </Container>

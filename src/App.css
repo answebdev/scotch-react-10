@@ -52,3 +52,23 @@
 .page-deets {
   margin-top: 80px;
 }
+
+/* DAY THREE STYLES */
+.input-display,
+.inputs {
+  text-align: left;
+  margin: 20px;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.input {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.subtitle {
+  margin-top: 80px;
+}

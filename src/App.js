@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/pages/Home';
 import One from './components/pages/One';
 import Two from './components/pages/Two';
+import Three from './components/pages/Three';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -19,6 +20,11 @@ function App() {
             exact
             path='/loop-over-and-display-data-with-jsx'
             component={Two}
+          />
+          <Route
+            exact
+            path='/use-react-state-to-update-the-dom'
+            component={Three}
           />
         </Switch>
       </div>
