@@ -25,50 +25,23 @@ const Home = () => {
             <strong>Challenges</strong>
           </h3>
           <p>
-            <strong>Day 1:</strong> Display Simple Data with JSX&nbsp;&nbsp;
-            <Button
-              variant='primary'
-              size='sm'
-              href='/display-simple-data-with-jsx'
-              style={{ marginRight: '5px' }}
-            >
-              View <i class='fas fa-eye'></i>
-            </Button>
+            <strong>Day 1:</strong> Display Simple Data with JSX &nbsp;| &nbsp;
+            <a href='/display-simple-data-with-jsx'>View</a>
           </p>
           <p>
-            <strong>Day 2:</strong> Loop Over and Display Data with
-            JSX&nbsp;&nbsp;
-            <Button
-              variant='primary'
-              size='sm'
-              href='/loop-over-and-display-data-with-jsx'
-              style={{ marginRight: '5px' }}
-            >
-              View <i class='fas fa-eye'></i>
-            </Button>
+            <strong>Day 2:</strong> Loop Over and Display Data with JSX &nbsp;|
+            &nbsp;
+            <a href='/loop-over-and-display-data-with-jsx'>View</a>
           </p>
           <p>
-            <strong>Day 3:</strong> Use React State to Update the DOM
-            JSX&nbsp;&nbsp;
-            <Button
-              variant='primary'
-              size='sm'
-              href='/use-react-state-to-update-the-dom'
-              style={{ marginRight: '5px' }}
-            >
-              View <i class='fas fa-eye'></i>
-            </Button>
+            <strong>Day 3:</strong> Use React State to Update the DOM JSX
+            &nbsp;| &nbsp;
+            <a href='/use-react-state-to-update-the-dom'>View</a>
           </p>
           <p>
-            <strong>Day 4:</strong> Show an Alert Based on an Input&nbsp;&nbsp;
-            <Button
-              variant='primary'
-              size='sm'
-              href='/show-an-alert-based-on-an-input'
-              style={{ marginRight: '5px' }}
-            >
-              View <i class='fas fa-eye'></i>
-            </Button>
+            <strong>Day 4:</strong> Show an Alert Based on an Input &nbsp;|
+            &nbsp;
+            <a href='/show-an-alert-based-on-an-input'>View</a>
           </p>
         </div>
       </div>

@@ -33,31 +33,33 @@ const One = () => {
           <h3>
             <a href={url}>{user.name}</a>
           </h3>
-
           <p>
             <strong>Location: </strong>
             {user.location}
           </p>
-
           <p>
             <strong>Eats: </strong>
             {user.FoodType}
           </p>
-
           <p>
             <strong>Age: </strong>
             {user.age}
           </p>
-
           <p>
             <strong>Likes: </strong>
             {user.likes}
           </p>
-
           <p>
             <strong>Twitter: </strong>
             <a href={url}>@{user.twitterUsername}</a>
           </p>
+          <a
+            id='twitter-btn'
+            href='https://twitter.com/chrisoncode'
+            title='Follow @chrisoncode on Twitter'
+          >
+            <i class='fab fa-twitter'></i> @chrisoncode
+          </a>
 
           <p>
             See the sandbox here&nbsp;

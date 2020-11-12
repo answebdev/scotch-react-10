@@ -38,6 +38,16 @@
   margin-bottom: 6px;
 }
 
+#twitter-btn {
+  background: #1e99e6;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  padding: 2px 8px;
+  letter-spacing: 0.5px;
+}
+
 /* DAY TWO STYLES */
 .users {
   text-align: left;
