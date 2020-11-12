@@ -59,6 +59,17 @@ const Home = () => {
               View <i class='fas fa-eye'></i>
             </Button>
           </p>
+          <p>
+            <strong>Day 4:</strong> Show an Alert Based on an Input&nbsp;&nbsp;
+            <Button
+              variant='primary'
+              size='sm'
+              href='/show-an-alert-based-on-an-input'
+              style={{ marginRight: '5px' }}
+            >
+              View <i class='fas fa-eye'></i>
+            </Button>
+          </p>
         </div>
       </div>
     </Container>

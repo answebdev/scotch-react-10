@@ -4,6 +4,7 @@ import Home from './components/pages/Home';
 import One from './components/pages/One';
 import Two from './components/pages/Two';
 import Three from './components/pages/Three';
+import Four from './components/pages/Four';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -25,6 +26,11 @@ function App() {
             exact
             path='/use-react-state-to-update-the-dom'
             component={Three}
+          />
+          <Route
+            exact
+            path='/show-an-alert-based-on-an-input'
+            component={Four}
           />
         </Switch>
       </div>
