@@ -43,6 +43,10 @@ const Home = () => {
             &nbsp;
             <a href='/show-an-alert-based-on-an-input'>View</a>
           </p>
+          <p>
+            <strong>Day 5:</strong> Adding Calculator &nbsp;| &nbsp;
+            <a href='/adding-calculator'>View</a>
+          </p>
         </div>
       </div>
     </Container>

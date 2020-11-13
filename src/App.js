@@ -5,6 +5,7 @@ import One from './components/pages/One';
 import Two from './components/pages/Two';
 import Three from './components/pages/Three';
 import Four from './components/pages/Four';
+import Five from './components/pages/Five';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -32,6 +33,7 @@ function App() {
             path='/show-an-alert-based-on-an-input'
             component={Four}
           />
+          <Route exact path='/adding-calculator' component={Five} />
         </Switch>
       </div>
     </Router>
