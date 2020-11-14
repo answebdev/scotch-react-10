@@ -6,6 +6,7 @@ import Two from './components/pages/Two';
 import Three from './components/pages/Three';
 import Four from './components/pages/Four';
 import Five from './components/pages/Five';
+import Six from './components/pages/Six';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -34,6 +35,7 @@ function App() {
             component={Four}
           />
           <Route exact path='/adding-calculator' component={Five} />
+          <Route exact path='/dom-movement-with-events' component={Six} />
         </Switch>
       </div>
     </Router>

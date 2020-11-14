@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -46,6 +46,10 @@ const Home = () => {
           <p>
             <strong>Day 5:</strong> Adding Calculator &nbsp;| &nbsp;
             <a href='/adding-calculator'>View</a>
+          </p>
+          <p>
+            <strong>Day 6:</strong> DOM Movement with Events &nbsp;| &nbsp;
+            <a href='/dom-movement-with-events'>View</a>
           </p>
         </div>
       </div>
