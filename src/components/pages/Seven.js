@@ -53,6 +53,18 @@ const Seven = () => {
             );
           })}
       </div>
+
+      <p>
+        See the sandbox here&nbsp;
+        <a
+          href='https://codesandbox.io/s/r094p6ylkq%5C'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          here
+        </a>
+        .
+      </p>
     </div>
   );
 };
