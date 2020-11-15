@@ -7,6 +7,7 @@ import Three from './components/pages/Three';
 import Four from './components/pages/Four';
 import Five from './components/pages/Five';
 import Six from './components/pages/Six';
+import Seven from './components/pages/Seven';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -36,6 +37,11 @@ function App() {
           />
           <Route exact path='/adding-calculator' component={Five} />
           <Route exact path='/dom-movement-with-events' component={Six} />
+          <Route
+            exact
+            path='/fetch-and-display-from-an-api'
+            component={Seven}
+          />
         </Switch>
       </div>
     </Router>

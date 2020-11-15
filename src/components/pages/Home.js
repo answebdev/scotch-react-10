@@ -51,6 +51,10 @@ const Home = () => {
             <strong>Day 6:</strong> DOM Movement with Events &nbsp;| &nbsp;
             <a href='/dom-movement-with-events'>View</a>
           </p>
+          <p>
+            <strong>Day 7:</strong> Fetch and Display from an API &nbsp;| &nbsp;
+            <a href='/fetch-and-display-from-an-api'>View</a>
+          </p>
         </div>
       </div>
     </Container>
