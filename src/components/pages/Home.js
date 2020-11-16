@@ -55,6 +55,11 @@ const Home = () => {
             <strong>Day 7:</strong> Fetch and Display from an API &nbsp;| &nbsp;
             <a href='/fetch-and-display-from-an-api'>View</a>
           </p>
+          <p>
+            <strong>Day 8:</strong> Recreate Layout with Components &nbsp;|
+            &nbsp;
+            <a href='/recreate-layout-with-components'>View</a>
+          </p>
         </div>
       </div>
     </Container>

@@ -8,6 +8,7 @@ import Four from './components/pages/Four';
 import Five from './components/pages/Five';
 import Six from './components/pages/Six';
 import Seven from './components/pages/Seven';
+import Eight from './components/pages/Eight';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -41,6 +42,11 @@ function App() {
             exact
             path='/fetch-and-display-from-an-api'
             component={Seven}
+          />
+          <Route
+            exact
+            path='/recreate-layout-with-components'
+            component={Eight}
           />
         </Switch>
       </div>
