@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import '../styles/Infinite.css';
 
 // Dummy data - array of 25 elements (counts up from 1 to 25) (although your data can come from somehwere, like a server):
 const allData = new Array(25).fill(0).map((_val, i) => i + 1);
