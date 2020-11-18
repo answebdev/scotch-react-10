@@ -9,6 +9,7 @@ const Navigation = () => {
         <Navbar.Brand href='/'>Scotch React Challenges</Navbar.Brand>
         <Nav className='mr-auto'>
           <Nav.Link href='/'>Home</Nav.Link>
+          <Nav.Link href='/misc'>Misc</Nav.Link>
           <Nav.Link
             href='https://scotch.io/'
             rel='noopener noreferrer'
@@ -16,7 +17,6 @@ const Navigation = () => {
           >
             Scotch
           </Nav.Link>
-          {/* <Nav.Link href='#pricing'>Pricing</Nav.Link> */}
         </Nav>
       </Navbar>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/pages/Home';
+import Misc from './components/pages/Misc';
 import One from './components/pages/One';
 import Two from './components/pages/Two';
 import Three from './components/pages/Three';
@@ -9,6 +10,8 @@ import Five from './components/pages/Five';
 import Six from './components/pages/Six';
 import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
+import InfiniteScroll from './components/pages/InfiniteScroll';
+import MapboxReact from './components/pages/MapboxReact';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -20,6 +23,7 @@ function App() {
       <div className='App'>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/misc' component={Misc} />
           <Route exact path='/display-simple-data-with-jsx' component={One} />
           <Route
             exact
@@ -48,6 +52,8 @@ function App() {
             path='/recreate-layout-with-components'
             component={Eight}
           />
+          <Route exact path='/infinite-scroll' component={InfiniteScroll} />
+          <Route exact path='/mapbox-react' component={MapboxReact} />
         </Switch>
       </div>
     </Router>
