@@ -117,7 +117,11 @@ const InfiniteScroll = () => {
 
           <ul>
             {data.map((row) => (
-              <li key={row} style={{ background: 'orange' }}>
+              <li
+                className='infinite-li'
+                key={row}
+                style={{ background: 'orange' }}
+              >
                 {row}
               </li>
             ))}
@@ -129,9 +133,10 @@ const InfiniteScroll = () => {
                 When not loading ('!loading') is 'true'.
                 So we want to show the Load More button when it's not loading AND (&&) there's more to load: */}
             {!loading && more && (
-              <li style={{ background: 'green' }}>
+              <li className='infinite-li' style={{ background: 'green' }}>
                 {/* When the user clicks the button, it will dispatch the 'start' event (see above in 'reducer' function). */}
                 <button
+                  className='infinite-btn'
                   onClick={() => {
                     dispatch({ type: 'start' });
 
@@ -148,7 +153,7 @@ const InfiniteScroll = () => {
                     }, 1000);
                   }}
                 >
-                  Load More
+                  <span id='load-more'>Load More</span>
                 </button>
               </li>
             )}

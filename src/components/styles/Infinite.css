@@ -1,7 +1,7 @@
-body {
+/* body {
   font-size: 16px;
   padding: 1rem;
-}
+} */
 
 ul {
   margin: 0 auto;
@@ -9,18 +9,22 @@ ul {
   list-style: none;
 }
 
-li {
+.infinite-li {
   padding: 1rem;
   margin: 1rem;
   min-height: 100px;
 }
 
-button {
+.infinite-btn {
   border-radius: 0px;
-  background: #bbded6;
+  background: steelblue;
   border: none;
   cursor: pointer;
   padding: 1rem;
+}
+
+#load-more {
+  font-size: 16px;
 }
 
 span {
