@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import '../styles/Infinite.css';
 
 // Dummy data - array of 25 elements (counts up from 1 to 25) (although your data can come from somehwere, like a server):
@@ -114,9 +114,42 @@ const InfiniteScroll = () => {
             .
           </p>
           <hr />
+          <Row>
+            <Col md={3}></Col>
+            <Col md={6}>
+              {data.map((row) => (
+                <Card
+                  key={row}
+                  style={{ width: '38rem', marginBottom: '20px' }}
+                >
+                  <Card.Body>
+                    <Card.Title>
+                      Governors Call On Gretchen Whitmer To Shut Down Their
+                      States So Residents Won’t Get Mad At Them
+                    </Card.Title>
+                    <Card.Subtitle className='mb-2 text-muted'>
+                      The Onion
+                    </Card.Subtitle>
+                    <Card.Text>
+                      LANSING, MI—In an effort to take decisive action against
+                      the rapid spread of the coronavirus, governors across the
+                      country called on Michigan governor Gretchen Whitmer this
+                      week to shut down their states this week so their
+                      residents won’t get mad at them.
+                    </Card.Text>
+                    <Card.Link
+                      href='https://politics.theonion.com/governors-call-on-gretchen-whitmer-to-shut-down-their-s-1845691592'
+                      rel='noopener noreferrer'
+                      target='_blank'
+                    >
+                      Read Article
+                    </Card.Link>
+                  </Card.Body>
+                </Card>
+              ))}
 
-          <ul>
-            {data.map((row) => (
+              <ul>
+                {/* {data.map((row) => (
               <li
                 className='infinite-li'
                 key={row}
@@ -124,40 +157,47 @@ const InfiniteScroll = () => {
               >
                 {row}
               </li>
-            ))}
+            ))} */}
 
-            {/* If 'loading' is 'true', return this <li>: */}
-            {loading && <li>Loading...</li>}
+                {/* If 'loading' is 'true', return this <li>: */}
+                {loading && <li>Loading...</li>}
 
-            {/* Hide this <li> when things are loading, so
+                {/* Hide this <li> when things are loading, so
                 When not loading ('!loading') is 'true'.
                 So we want to show the Load More button when it's not loading AND (&&) there's more to load: */}
-            {!loading && more && (
-              <li className='infinite-li' style={{ background: 'green' }}>
-                {/* When the user clicks the button, it will dispatch the 'start' event (see above in 'reducer' function). */}
-                <button
-                  className='infinite-btn'
-                  onClick={() => {
-                    dispatch({ type: 'start' });
+                {!loading && more && (
+                  // <li className='infinite-li' style={{ background: 'green' }}>
+                  <li>
+                    {/* When the user clicks the button, it will dispatch the 'start' event (see above in 'reducer' function). */}
+                    <Button
+                      variant='primary'
+                      size='lg'
+                      block
+                      // className='infinite-btn'
+                      onClick={() => {
+                        dispatch({ type: 'start' });
 
-                    // Use 'setTimeout' to fake asynchronous.
-                    setTimeout(() => {
-                      // Grab the new data:
-                      // Slice off the new data that we want to append to the data array -
-                      // Slice from where we got to last time (use the 'after' variable because as we load data, this changes),
-                      // and then however many we want to load (our per page is 10, i.e. 'perPage').
-                      const newData = allData.slice(after, after + perPage);
+                        // Use 'setTimeout' to fake asynchronous.
+                        setTimeout(() => {
+                          // Grab the new data:
+                          // Slice off the new data that we want to append to the data array -
+                          // Slice from where we got to last time (use the 'after' variable because as we load data, this changes),
+                          // and then however many we want to load (our per page is 10, i.e. 'perPage').
+                          const newData = allData.slice(after, after + perPage);
 
-                      // Our reducer will receive 'loaded' and the new data that we grabbed:
-                      dispatch({ type: 'loaded', newData });
-                    }, 1000);
-                  }}
-                >
-                  <span id='load-more'>Load More</span>
-                </button>
-              </li>
-            )}
-          </ul>
+                          // Our reducer will receive 'loaded' and the new data that we grabbed:
+                          dispatch({ type: 'loaded', newData });
+                        }, 1000);
+                      }}
+                    >
+                      <span id='load-more'>Load More Articles</span>
+                    </Button>
+                  </li>
+                )}
+              </ul>
+            </Col>
+            <Col md={3}></Col>
+          </Row>
         </div>
       </div>
     </Container>
