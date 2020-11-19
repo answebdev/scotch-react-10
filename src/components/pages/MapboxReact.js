@@ -1,15 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import * as parkData from '../data/skateboard-parks.json';
+import '../styles/Mapbox.css';
 
 const MapboxReact = () => {
+  const TOKEN =
+    'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
+
   const [viewport, setViewport] = useState({
     latitude: 45.421106,
     longitude: -75.690308,
-    width: '100vw',
-    height: '100vh',
+    width: '87vw',
+    height: '87vh',
     zoom: 10,
   });
+
+  // State to use for popup.
+  // Set 'useState' to 'null' because the user hasn't chosen any park to see the info yet.
+  const [selectedPark, setSelectedPark] = useState(null);
+
+  // Set 'useEffect' so that we can close popup with Escape key.
+  // We use an empty array ([]) because we only want this to happen once.
+  // And we only want this to happen once because we want to add a keydown listener on the window,
+  // so we only need to attach that event listener one time.
+  useEffect(() => {
+    const listener = (e) => {
+      // If we hit the Escape key, set the selected park back to null, which will cause the popup to disappear.
+      if (e.key === 'Escape') {
+        setSelectedPark(null);
+      }
+    };
+    window.addEventListener('keydown', listener);
+
+    // Say this 'MapboxReact.js' file disappears and stops being rendered by React.
+    // And we want to clean up this event listener. We no longer care about listening for the Escape key,
+    // so we want to basically remove that event listener.
+    // We can use the effect cleanup function to do that.
+    // So, we return a function, which will be called on the cleanup of this effect (which in this case, is
+    // when the app component is unmounted):
+    return () => {
+      window.removeEventListener('keydown', listener);
+    };
+  }, []);
 
   const styles = {
     fontSize: '16px',
@@ -40,6 +73,11 @@ const MapboxReact = () => {
               here
             </a>
             .
+            <p>
+              Note: Need to figure out how to get Mapbox access token working
+              while in <strong>.env.local</strong> (Mapbox access token is
+              currently defined as a variable and used in main file).
+            </p>
           </p>
           <p style={styles}>
             Resources:
@@ -98,16 +136,52 @@ const MapboxReact = () => {
           </p>
           <hr />
         </div>
+        <div style={{ marginBottom: '40px' }}>
+          <ReactMapGL
+            {...viewport}
+            mapboxApiAccessToken={TOKEN}
+            // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+            mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
+            onViewportChange={(viewport) => {
+              setViewport(viewport);
+            }}
+          >
+            {parkData.features.map((park) => (
+              <Marker
+                key={park.properties.PARK_ID}
+                latitude={park.geometry.coordinates[1]}
+                longitude={park.geometry.coordinates[0]}
+              >
+                {/* Click event for popup info: */}
+                <button
+                  className='marker-btn'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedPark(park);
+                  }}
+                >
+                  <img src='/skateboarding.svg' alt='Skate Park Icon' />
+                </button>
+              </Marker>
+            ))}
 
-        <ReactMapGL
-          {...viewport}
-          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-          onViewportChange={(viewport) => {
-            setViewport(viewport);
-          }}
-        >
-          markers here
-        </ReactMapGL>
+            {/* If there is a selected park, show a popup (need to import Popup above - line 3): */}
+            {selectedPark ? (
+              <Popup
+                latitude={selectedPark.geometry.coordinates[1]}
+                longitude={selectedPark.geometry.coordinates[0]}
+                onClose={() => {
+                  setSelectedPark(null);
+                }}
+              >
+                <div>
+                  <h2>{selectedPark.properties.NAME}</h2>
+                  <p>{selectedPark.properties.DESCRIPTIO}</p>
+                </div>
+              </Popup>
+            ) : null}
+          </ReactMapGL>
+        </div>
       </div>
     </Container>
   );

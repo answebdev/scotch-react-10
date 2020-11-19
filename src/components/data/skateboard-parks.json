@@ -1,6 +1,3 @@
-// 20201119081457
-// https://raw.githubusercontent.com/leighhalliday/mapbox-react-demo/master/src/data/skateboard-parks.json
-
 {
     "type": "FeatureCollection",
     "crs": {
