@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import ReactMapGL from 'react-map-gl';
 
 const MapboxReact = () => {
+  const [viewport, setViewport] = useState({
+    latitude: 45.421106,
+    longitude: -75.690308,
+    width: '100vw',
+    height: '100vh',
+    zoom: 10,
+  });
+
   const styles = {
     fontSize: '16px',
   };
@@ -89,6 +98,16 @@ const MapboxReact = () => {
           </p>
           <hr />
         </div>
+
+        <ReactMapGL
+          {...viewport}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          onViewportChange={(viewport) => {
+            setViewport(viewport);
+          }}
+        >
+          markers here
+        </ReactMapGL>
       </div>
     </Container>
   );
