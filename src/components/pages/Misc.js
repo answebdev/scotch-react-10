@@ -26,6 +26,18 @@ const Misc = () => {
               Mapbox React &nbsp;| &nbsp;
               <a href='/mapbox-react'>View</a>
             </li>
+            <li style={styles}>
+              Drag n' Drop Files in React &nbsp;| &nbsp;
+              <a href='/react-drag-n-drop'>View</a>
+            </li>
+            <li style={styles}>
+              React Stripe Elements &nbsp;| &nbsp;
+              <a href='/react-stripe-elements'>View</a>
+            </li>
+            <li style={styles}>
+              Using reCAPTCHA in React and Node &nbsp;| &nbsp;
+              <a href='/using-recaptcha-in-react-and-node'>View</a>
+            </li>
           </ol>
         </div>
       </div>

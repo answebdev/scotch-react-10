@@ -12,6 +12,9 @@ import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
 import InfiniteScroll from './components/pages/InfiniteScroll';
 import MapboxReact from './components/pages/MapboxReact';
+import ReactDragDrop from './components/pages/ReactDragDrop';
+import ReactStripeElements from './components/pages/ReactStripeElements';
+import ReactReCaptcha from './components/pages/ReactReCaptcha';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -54,6 +57,17 @@ function App() {
           />
           <Route exact path='/infinite-scroll' component={InfiniteScroll} />
           <Route exact path='/mapbox-react' component={MapboxReact} />
+          <Route exact path='/react-drag-n-drop' component={ReactDragDrop} />
+          <Route
+            exact
+            path='/react-stripe-elements'
+            component={ReactStripeElements}
+          />
+          <Route
+            exact
+            path='/using-recaptcha-in-react-and-node'
+            component={ReactReCaptcha}
+          />
         </Switch>
       </div>
     </Router>
