@@ -78,6 +78,22 @@ const ReactDragDrop = () => {
               </li>
             </ul>
           </p>
+          <p style={styles}>
+            Additional Resources:
+            <ul>
+              <li>
+                How To Make A Drag-and-Drop File Uploader With Vanilla
+                JavaScript &nbsp;| &nbsp;
+                <a
+                  href='https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+            </ul>
+          </p>
           <hr />
         </div>
 
