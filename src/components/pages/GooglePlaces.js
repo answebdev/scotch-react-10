@@ -4,6 +4,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
+import '../styles/GooglePlaces.css';
 
 // NOTE:
 // For this project, you need to add a script with your Google API Key to index.html (see index.html).
@@ -73,6 +74,16 @@ const GooglePlaces = () => {
                 </a>
               </li>
               <li>
+                How To Create Google Maps API KEY For Free &nbsp;| &nbsp;
+                <a
+                  href='https://www.youtube.com/watch?v=OGTG1l7yin4'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
                 How to Create Google Maps API KEY for Free &nbsp;| &nbsp;
                 <a
                   href='https://www.youtube.com/watch?v=1JNwpp5L4vM'
@@ -111,7 +122,10 @@ const GooglePlaces = () => {
               loading,
             }) => (
               <div>
-                <input {...getInputProps({ placeholder: 'Type address' })} />
+                <input
+                  id='address'
+                  {...getInputProps({ placeholder: 'Type address' })}
+                />
 
                 <div>
                   {loading ? <div>...loading</div> : null}
