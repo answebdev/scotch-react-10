@@ -31,6 +31,10 @@ const Misc = () => {
               <a href='/react-drag-n-drop'>View</a>
             </li>
             <li style={styles}>
+              Google Places: Autocomplete in React &nbsp;| &nbsp;
+              <a href='/google-places'>View</a>
+            </li>
+            <li style={styles}>
               React Stripe Elements &nbsp;| &nbsp;
               <a href='/react-stripe-elements'>View</a>
             </li>

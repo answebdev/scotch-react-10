@@ -78,22 +78,6 @@ const ReactDragDrop = () => {
               </li>
             </ul>
           </p>
-          <p style={styles}>
-            Additional Resources:
-            <ul>
-              <li>
-                How To Make A Drag-and-Drop File Uploader With Vanilla
-                JavaScript &nbsp;| &nbsp;
-                <a
-                  href='https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-            </ul>
-          </p>
           <hr />
         </div>
 
@@ -132,6 +116,7 @@ const ReactDragDrop = () => {
               // So, this will give us a filtered down array of files:
               Array.from(e.dataTransfer.files)
                 .filter((file) => file.type === 'text/csv')
+
                 // Iterate through each file and add it to state
                 .forEach(async (file) => {
                   console.log(file);
@@ -156,6 +141,7 @@ const ReactDragDrop = () => {
           <ul>
             {contacts.map((contact) => (
               <li key={contact.email}>
+                <br />
                 <strong>{contact.name}</strong>: {contact.email}
               </li>
             ))}
