@@ -123,6 +123,16 @@ const MapboxReact = () => {
                 </a>
               </li>
               <li>
+                Mapbox Styles &nbsp;| &nbsp;
+                <a
+                  href='https://www.mapbox.com/gallery/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
                 Use Mapbox GL JS in a React App &nbsp;| &nbsp;
                 <a
                   href='https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/'
