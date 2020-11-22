@@ -27,7 +27,7 @@ const Misc = () => {
               <a href='/mapbox-react'>View</a>
             </li>
             <li style={styles}>
-              Drag n' Drop Files in React &nbsp;| &nbsp;
+              Drag n' Drop Files in React (not working) &nbsp;| &nbsp;
               <a href='/react-drag-n-drop'>View</a>
             </li>
             <li style={styles}>
@@ -35,15 +35,16 @@ const Misc = () => {
               <a href='/react-forms'>View</a>
             </li>
             <li style={styles}>
-              Google Places: Autocomplete in React &nbsp;| &nbsp;
+              Google Places: Autocomplete in React (need working API key)
+              &nbsp;| &nbsp;
               <a href='/google-places'>View</a>
             </li>
             <li style={styles}>
-              React Stripe Elements &nbsp;| &nbsp;
+              React Stripe Elements (not yet done) &nbsp;| &nbsp;
               <a href='/react-stripe-elements'>View</a>
             </li>
             <li style={styles}>
-              Using reCAPTCHA in React and Node &nbsp;| &nbsp;
+              Using reCAPTCHA in React and Node (not yet done) &nbsp;| &nbsp;
               <a href='/using-recaptcha-in-react-and-node'>View</a>
             </li>
           </ol>
