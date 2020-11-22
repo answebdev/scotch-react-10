@@ -13,6 +13,7 @@ import Eight from './components/pages/Eight';
 import InfiniteScroll from './components/pages/InfiniteScroll';
 import MapboxReact from './components/pages/MapboxReact';
 import ReactDragDrop from './components/pages/ReactDragDrop';
+import ReactForms from './components/pages/ReactForms';
 import GooglePlaces from './components/pages/GooglePlaces';
 import ReactStripeElements from './components/pages/ReactStripeElements';
 import ReactReCaptcha from './components/pages/ReactReCaptcha';
@@ -59,6 +60,7 @@ function App() {
           <Route exact path='/infinite-scroll' component={InfiniteScroll} />
           <Route exact path='/mapbox-react' component={MapboxReact} />
           <Route exact path='/react-drag-n-drop' component={ReactDragDrop} />
+          <Route exact path='/react-forms' component={ReactForms} />
           <Route exact path='/google-places' component={GooglePlaces} />
           <Route
             exact
