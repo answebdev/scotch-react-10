@@ -5,6 +5,9 @@ import * as parkData from '../data/skateboard-parks.json';
 import '../styles/Mapbox.css';
 
 const MapboxReact = () => {
+  const TOKEN =
+    'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
+
   const [viewport, setViewport] = useState({
     latitude: 45.421106,
     longitude: -75.690308,
@@ -120,16 +123,6 @@ const MapboxReact = () => {
                 </a>
               </li>
               <li>
-                Mapbox Styles &nbsp;| &nbsp;
-                <a
-                  href='https://studio.mapbox.com/'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
                 Use Mapbox GL JS in a React App &nbsp;| &nbsp;
                 <a
                   href='https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/'
@@ -156,7 +149,8 @@ const MapboxReact = () => {
         <div style={{ marginBottom: '40px' }}>
           <ReactMapGL
             {...viewport}
-            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+            mapboxApiAccessToken={TOKEN}
+            // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
             mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
             onViewportChange={(viewport) => {
               setViewport(viewport);
