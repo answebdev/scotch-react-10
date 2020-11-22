@@ -3,10 +3,13 @@ import { Container } from 'react-bootstrap';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as parkData from '../data/skateboard-parks.json';
 import '../styles/Mapbox.css';
+require('dotenv').config();
 
 const MapboxReact = () => {
-  const TOKEN =
-    'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
+  // const TOKEN =
+  //   'pk.eyJ1IjoiYW5zd2ViZGV2IiwiYSI6ImNraG54eXduNzBicXQycW1pdWh0MjI3cW8ifQ.j2dXhA2inqmrC9MotbCn-A';
+
+  console.log(process.env);
 
   const [viewport, setViewport] = useState({
     latitude: 45.421106,
@@ -149,8 +152,8 @@ const MapboxReact = () => {
         <div style={{ marginBottom: '40px' }}>
           <ReactMapGL
             {...viewport}
-            mapboxApiAccessToken={TOKEN}
-            // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+            // mapboxApiAccessToken={TOKEN}
+            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
             mapStyle='mapbox://styles/answebdev/ckhp3rta60d2l19piwffs1aj5'
             onViewportChange={(viewport) => {
               setViewport(viewport);
