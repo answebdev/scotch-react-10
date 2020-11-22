@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Container } from 'react-bootstrap';
 
 const Five = () => {
   //   const [number1, setNumber1] = useState(34);

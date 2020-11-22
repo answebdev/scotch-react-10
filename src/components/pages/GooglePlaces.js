@@ -48,6 +48,10 @@ const GooglePlaces = () => {
               here
             </a>
             .
+            <p>
+              May need to set billing statement in Google Maps account to get
+              API key to work.
+            </p>
           </p>
           <p style={styles}>
             Resources:

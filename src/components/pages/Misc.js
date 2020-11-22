@@ -31,8 +31,8 @@ const Misc = () => {
               <a href='/react-drag-n-drop'>View</a>
             </li>
             <li style={styles}>
-              React Forms &nbsp;| &nbsp;
-              <a href='/react-forms'>View</a>
+              React Pagination &nbsp;| &nbsp;
+              <a href='/react-pagination'>View</a>
             </li>
             <li style={styles}>
               Google Places: Autocomplete in React (need working API key)
