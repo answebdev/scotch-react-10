@@ -60,11 +60,6 @@ const Home = () => {
             &nbsp;
             <a href='/recreate-layout-with-components'>View</a>
           </p>
-          <hr />
-          <p style={{ fontSize: '16px' }}>
-            <strong>Practice 1:</strong> Input Field &nbsp;| &nbsp;
-            <a href='/input-field'>View</a>
-          </p>
         </div>
       </div>
     </Container>
