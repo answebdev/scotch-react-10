@@ -10,6 +10,7 @@ import Five from './components/pages/Five';
 import Six from './components/pages/Six';
 import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
+import PracticeOne from './components/pages/PracticeOne';
 import InfiniteScroll from './components/pages/InfiniteScroll';
 import MapboxReact from './components/pages/MapboxReact';
 import ReactDragDrop from './components/pages/ReactDragDrop';
@@ -57,6 +58,7 @@ function App() {
             path='/recreate-layout-with-components'
             component={Eight}
           />
+          <Route exact path='/input-field' component={PracticeOne} />
           <Route exact path='/infinite-scroll' component={InfiniteScroll} />
           <Route exact path='/mapbox-react' component={MapboxReact} />
           <Route exact path='/react-drag-n-drop' component={ReactDragDrop} />
