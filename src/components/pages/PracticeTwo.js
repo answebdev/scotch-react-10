@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import { SRLWrapper } from 'simple-react-lightbox';
 import error from '../../img/error.png';
 // We also need to export Radium down below in the 'export default' (see below).
 import Radium from 'radium';
@@ -159,18 +160,31 @@ class PracticeTwo extends Component {
           <p>
             After installing and using Radium, you may get an error saying that
             Radium requires each element with interactive styles to have a
-            unique key:
+            unique key (click on image):
           </p>
+
+          {/* Note: To use lightbox, you need to also import it in App.js and wrap your app with the lightbox component (see App.js) */}
           <Row>
-            <Col md={12}>
-              <Image
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={error}
+                  alt='Error'
+                />
+              </SRLWrapper>
+              {/* <Image
                 src={error}
                 style={{
                   width: '100%',
                   height: 'auto',
                 }}
                 fluid
-              />
+              /> */}
             </Col>
           </Row>
           <p>
