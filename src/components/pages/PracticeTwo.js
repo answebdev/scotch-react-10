@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { SRLWrapper } from 'simple-react-lightbox';
-import error from '../../img/error.png';
+import error1 from '../../img/error1.png';
+import error2 from '../../img/error2.png';
+import mediaQuery from '../../img/media-query.png';
+import styleRoot from '../../img/style-root.png';
 // We also need to export Radium down below in the 'export default' (see below).
 import Radium from 'radium';
 import '../styles/PracticeTwo.css';
@@ -47,6 +50,25 @@ const style2hover = {
   ':hover': {
     backgroundColor: 'orange',
     color: 'white',
+  },
+};
+
+// To use Radium for transforming selectors, like media queries or key frames,
+// we need to wrap the entire application in a special component provided by Radium,
+// and we do this in App.js (see App.js), by importing 'StyleRoot' from Radium:
+// import Radium, { StyleRoot } from 'radium'
+// Then down below in App.js, we wrap our whole application with <StyleRoot> in the 'return' statement.
+const queryStyle = {
+  fontSize: '20px',
+  textAlign: 'left',
+  backgroundColor: '#ffffff',
+  border: '1px solid black',
+  borderRadius: '5px',
+  color: 'black',
+  padding: '5px 25px',
+  margin: '10px 20px 80px 0',
+  '@media screen and (min-width: 981px) and (max-width: 1200px)': {
+    backgroundColor: 'red',
   },
 };
 
@@ -123,6 +145,19 @@ class PracticeTwo extends Component {
     });
   };
 
+  // Image: https://www.pexels.com/photo/sorae-ecology-park-in-korea-3405489/
+  clickHandler4 = () => {
+    Swal.fire({
+      title: 'Brown and Red Wind Mill',
+      text: 'South Korea',
+      imageUrl:
+        'https://images.pexels.com/photos/3405489/pexels-photo-3405489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Brown and Red Wind Mill in South Korea',
+    });
+  };
+
   render() {
     return (
       <Container>
@@ -173,20 +208,86 @@ class PracticeTwo extends Component {
                     height: 'auto',
                     cursor: 'pointer',
                   }}
-                  src={error}
+                  src={error1}
                   alt='Error'
                 />
               </SRLWrapper>
-              {/* <Image
-                src={error}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-                fluid
-              /> */}
             </Col>
           </Row>
+          <br />
+          <p>
+            To use Radium for transforming selectors, like media queries or key
+            frames, we simply create a <strong>constant</strong> for our
+            selector, in this case, for our media query, just like we did for
+            our pseudo selector. We then add this <strong>constant</strong> to
+            the style property of the element we want to give the media query
+            to. At this point, you will see this error, telling us to wrap our
+            application in the StyleRoot component (click on image).
+          </p>
+          <Row>
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={error2}
+                  alt='Error'
+                />
+              </SRLWrapper>
+            </Col>
+          </Row>
+          <br />
+          <p>
+            To use Radium for transforming selectors, like media queries or key
+            frames, the entire application needs to be wrapped in a special
+            component provided by Radium. This is done in{' '}
+            <strong>App.js</strong> by importing 'StyleRoot' from Radium. Then
+            down in the <strong>return</strong> statement, the entire
+            application is wrapped with the 'StyleRoot' component. Once this is
+            done, the error disappears and our media queries should now work.
+          </p>
+          <Row>
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={styleRoot}
+                  alt='Using Radium for Media Queries'
+                />
+              </SRLWrapper>
+            </Col>
+          </Row>
+          <br />
+          <p>
+            In our example, we added a media query so that the background color
+            of the "Click 1" button turns red when the screen size is reduced.
+            As you can see, the button indeed turns red when the screen size is
+            reduced, so we know that our media query is now working (click on
+            image).
+          </p>
+          <Row>
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={mediaQuery}
+                  alt='Media Query Example'
+                />
+              </SRLWrapper>
+            </Col>
+          </Row>
+          <br />
           <p>
             For information about how to use keys, take a look at this article{' '}
             <a
@@ -236,26 +337,31 @@ class PracticeTwo extends Component {
               </a>
               .
             </p>
-            <button style={style1} onClick={this.clickHandler1}>
+
+            <button style={queryStyle} onClick={this.clickHandler1}>
               Click 1
+            </button>
+
+            <button style={style1} onClick={this.clickHandler2}>
+              Click 2
             </button>
 
             <button
               input
               key={0}
               style={style1hover}
-              onClick={this.clickHandler2}
+              onClick={this.clickHandler3}
             >
-              Click 2
+              Click 3
             </button>
 
             <button
               input
               key={1}
               style={style2hover}
-              onClick={this.clickHandler3}
+              onClick={this.clickHandler4}
             >
-              Click 3
+              Click 4
             </button>
           </div>
         </div>
