@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import error from '../../img/error.png';
 // We also need to export Radium down below in the 'export default' (see below).
 import Radium from 'radium';
 import '../styles/PracticeTwo.css';
@@ -13,7 +14,7 @@ const style1 = {
   borderRadius: '5px',
   color: 'black',
   padding: '5px 25px',
-  margin: '10px',
+  margin: '10px 20px 80px 0',
 };
 
 const style1hover = {
@@ -24,7 +25,7 @@ const style1hover = {
   borderRadius: '5px',
   color: 'black',
   padding: '5px 25px',
-  margin: '10px',
+  margin: '10px 20px 80px 0',
   // Using Radium to add 'hover' (all pseudo selectors are supported) - note the syntax:
   ':hover': {
     backgroundColor: 'steelblue',
@@ -40,7 +41,7 @@ const style2hover = {
   borderRadius: '5px',
   color: 'black',
   padding: '5px 25px',
-  margin: '10px',
+  margin: '10px 20px 80px 0',
   // Using Radium to add 'hover' (all pseudo selectors are supported) - note the syntax:
   ':hover': {
     backgroundColor: 'orange',
@@ -154,6 +155,34 @@ class PracticeTwo extends Component {
             </a>{' '}
             to add this functionality to our apllication. Radium allows us to
             use inline styles with pseudo selectors and media queries.
+          </p>
+          <p>
+            After installing and using Radium, you may get an error saying that
+            Radium requires each element with interactive styles to have a
+            unique key:
+          </p>
+          <Row>
+            <Col md={12}>
+              <Image
+                src={error}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                fluid
+              />
+            </Col>
+          </Row>
+          <p>
+            For information about how to use keys, take a look at this article{' '}
+            <a
+              href='https://dev.to/ari_o/react-how-to-use-pseudo-selectors-with-radium-4gm5'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              here
+            </a>
+            .
           </p>
           <p>
             Useful resources:
