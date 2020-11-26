@@ -34,6 +34,41 @@ class PracticeOne extends Component {
             <strong>setState()</strong>, we must use a class-based component,
             and not a functional component.
           </p>
+          <p>
+            Useful resources:
+            <ul>
+              <li>
+                Conditional Rendering &nbsp;| &nbsp;
+                <a
+                  href='https://reactjs.org/docs/conditional-rendering.html'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
+                Lists & Keys &nbsp;| &nbsp;
+                <a
+                  href='https://reactjs.org/docs/lists-and-keys.html'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
+                Original Source &nbsp;| &nbsp;
+                <a
+                  href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/practice/16066/introduction#overview'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+            </ul>
+          </p>
           <hr />
           <div>
             <p>Enter some text. The text will appear below as you type.</p>

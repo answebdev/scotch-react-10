@@ -11,6 +11,7 @@ import Six from './components/pages/Six';
 import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
 import PracticeOne from './components/pages/PracticeOne';
+import PracticeTwo from './components/pages/PracticeTwo';
 
 import Navigation from './components/layout/Navigation';
 import './App.css';
@@ -52,6 +53,7 @@ function App() {
             component={Eight}
           />
           <Route exact path='/input-field' component={PracticeOne} />
+          <Route exact path='/managing-inline-styles' component={PracticeTwo} />
         </Switch>
       </div>
     </Router>

@@ -22,6 +22,10 @@ const Misc = () => {
               Practice 1: Input Field &nbsp;| &nbsp;
               <a href='/input-field'>View</a>
             </li>
+            <li style={styles}>
+              Practice 2: Managing Inline Styles &nbsp;| &nbsp;
+              <a href='/managing-inline-styles'>View</a>
+            </li>
           </ol>
         </div>
       </div>
