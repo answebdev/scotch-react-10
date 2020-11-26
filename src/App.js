@@ -20,11 +20,11 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Navigation />
-      <div className='App'>
-        <SimpleReactLightbox>
-          <StyleRoot>
+    <StyleRoot>
+      <SimpleReactLightbox>
+        <Router>
+          <Navigation />
+          <div className='App'>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/misc' component={Misc} />
@@ -67,10 +67,10 @@ function App() {
                 component={PracticeTwo}
               />
             </Switch>
-          </StyleRoot>
-        </SimpleReactLightbox>
-      </div>
-    </Router>
+          </div>
+        </Router>
+      </SimpleReactLightbox>
+    </StyleRoot>
   );
 }
 

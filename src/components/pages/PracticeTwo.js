@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { SRLWrapper } from 'simple-react-lightbox';
 import error1 from '../../img/error1.png';
 import error2 from '../../img/error2.png';
 import mediaQuery from '../../img/media-query.png';
 import styleRoot from '../../img/style-root.png';
+
 // We also need to export Radium down below in the 'export default' (see below).
 import Radium from 'radium';
 import '../styles/PracticeTwo.css';
