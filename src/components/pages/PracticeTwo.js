@@ -166,6 +166,52 @@ class PracticeTwo extends Component {
             Practice 2: Managing Inline Styles
           </h3>
           <p>
+            Useful resources:
+            <ul>
+              <li>
+                React - How to use pseudo-selectors with Radium &nbsp;| &nbsp;
+                <a
+                  href='https://dev.to/ari_o/react-how-to-use-pseudo-selectors-with-radium-4gm5'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
+                Simple React Light-Box &nbsp;| &nbsp;
+                <a
+                  href='https://simple-react-lightbox.dev/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
+                Simple React Light-Box (Medium Article)&nbsp;| &nbsp;
+                <a
+                  href='https://medium.com/@michelecocuccio/simple-react-light-box-28063402101a'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
+                Udemy Source &nbsp;| &nbsp;
+                <a
+                  href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8094580#overview'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+            </ul>
+          </p>
+          <hr />
+          <p>
             When using inline styles in React, you are not able to add
             pseudo-classes like <strong>:hover</strong> (or use media queries).
             And if you were to create a separate CSS file and add a pseudo-class
@@ -215,6 +261,17 @@ class PracticeTwo extends Component {
             </Col>
           </Row>
           <br />
+          <p>
+            For information about how to use keys, take a look at this article{' '}
+            <a
+              href='https://dev.to/ari_o/react-how-to-use-pseudo-selectors-with-radium-4gm5'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              here
+            </a>
+            .
+          </p>
           <p>
             To use Radium for transforming selectors, like media queries or key
             frames, we simply create a <strong>constant</strong> for our
@@ -288,43 +345,7 @@ class PracticeTwo extends Component {
             </Col>
           </Row>
           <br />
-          <p>
-            For information about how to use keys, take a look at this article{' '}
-            <a
-              href='https://dev.to/ari_o/react-how-to-use-pseudo-selectors-with-radium-4gm5'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              here
-            </a>
-            .
-          </p>
-          <p>
-            Useful resources:
-            <ul>
-              <li>
-                React - How to use pseudo-selectors with Radium &nbsp;| &nbsp;
-                <a
-                  href='https://dev.to/ari_o/react-how-to-use-pseudo-selectors-with-radium-4gm5'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-              <li>
-                Original Source &nbsp;| &nbsp;
-                <a
-                  href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8094580#overview'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  View
-                </a>
-              </li>
-            </ul>
-          </p>
-          <hr />
+
           <div>
             <p>
               Check out these SweetAlerts from{' '}
