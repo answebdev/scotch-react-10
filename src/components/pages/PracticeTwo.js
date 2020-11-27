@@ -5,6 +5,7 @@ import { SRLWrapper } from 'simple-react-lightbox';
 import error1 from '../../img/error1.png';
 import error2 from '../../img/error2.png';
 import radium from '../../img/radium.png';
+import hover from '../../img/hover.png';
 import mediaQuery from '../../img/media-query.png';
 import styleRoot from '../../img/style-root.png';
 
@@ -295,7 +296,28 @@ class PracticeTwo extends Component {
                     cursor: 'pointer',
                   }}
                   src={radium}
-                  alt='Error'
+                  alt='Using Radium for the :hover Selector'
+                />
+              </SRLWrapper>
+            </Col>
+          </Row>
+          <br />
+          <p>
+            As you can see, the "Click 3" button changes color when hovered
+            over, so we know that the style we added to the{' '}
+            <strong>:hover</strong> selector is now working (click on image).
+          </p>
+          <Row>
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={hover}
+                  alt='Using Radium for the :hover Selector'
                 />
               </SRLWrapper>
             </Col>
