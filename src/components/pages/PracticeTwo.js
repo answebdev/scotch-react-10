@@ -181,6 +181,16 @@ class PracticeTwo extends Component {
                 </a>
               </li>
               <li>
+                Higher-Order Components &nbsp;| &nbsp;
+                <a
+                  href='https://reactjs.org/docs/higher-order-components.html'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  View
+                </a>
+              </li>
+              <li>
                 Simple React Light-Box &nbsp;| &nbsp;
                 <a
                   href='https://simple-react-lightbox.dev/'
