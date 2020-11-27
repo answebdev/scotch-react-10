@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { SRLWrapper } from 'simple-react-lightbox';
 import error1 from '../../img/error1.png';
 import error2 from '../../img/error2.png';
+import radium from '../../img/radium.png';
 import mediaQuery from '../../img/media-query.png';
 import styleRoot from '../../img/style-root.png';
 
@@ -212,19 +213,20 @@ class PracticeTwo extends Component {
             </ul>
           </p>
           <hr />
+          <h4>Pseudo-Selectors</h4>
           <p>
             When using inline styles in React, you are not able to add
-            pseudo-classes like <strong>:hover</strong> (or use media queries).
-            And if you were to create a separate CSS file and add a pseudo-class
-            to a button in this component, for example, then this style will not
-            be scoped to only this component, but be applied globally to all
-            buttons, even though that is not what we want. So how can we get
-            around this? Of course, we could get around this by adding unique
-            IDs and classes, but there are times when we need to use inline
-            styling, for example, when we want to set our styles dynamically in
-            our component using JavaScript. So we need a way to be able to use
-            pseudo-classes (and media queries) using inline styles in the same
-            component.
+            pseudo-classes like <strong>:hover</strong> or{' '}
+            <strong>:active</strong> (or use media queries). And if you were to
+            create a separate CSS file and add a pseudo-class to a button in
+            this component, for example, then this style will not be scoped to
+            only this component, but be applied globally to all buttons, even
+            though that is not what we want. So how can we get around this? Of
+            course, we could get around this by adding unique IDs and classes,
+            but there are times when we need to use inline styling, for example,
+            when we want to set our styles dynamically in our component using
+            JavaScript. So we need a way to be able to use pseudo-classes (and
+            media queries) using inline styles in the same component.
           </p>
           <p>
             By default, this is not possible, but we can add a third-party
@@ -273,6 +275,23 @@ class PracticeTwo extends Component {
             </a>
             .
           </p>
+          <Row>
+            <Col md={6}>
+              <SRLWrapper>
+                <img
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  src={radium}
+                  alt='Error'
+                />
+              </SRLWrapper>
+            </Col>
+          </Row>
+          <br />
+          <h4>Transforming Selectors</h4>
           <p>
             To use Radium for transforming selectors, like media queries or key
             frames, we simply create a <strong>constant</strong> for our
