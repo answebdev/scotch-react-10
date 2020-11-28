@@ -70,7 +70,7 @@ function App() {
               />
               <Route
                 exact
-                path='/setting-class-names-dynamically'
+                path='/setting-styles-dynamically'
                 component={PracticeThree}
               />
             </Switch>
