@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-const Misc = () => {
+const Notes = () => {
   const styles = {
     fontSize: '16px',
   };
@@ -10,7 +10,7 @@ const Misc = () => {
     <Container>
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
         <h3>
-          <strong>Misc React Projects</strong>
+          <strong>React Notes</strong>
         </h3>
         <hr />
         <div style={{ textAlign: 'left' }}>
@@ -23,12 +23,12 @@ const Misc = () => {
               <a href='/input-field'>View</a>
             </li>
             <li style={styles}>
-              Practice 2: Managing Inline Styles &nbsp;| &nbsp;
-              <a href='/managing-inline-styles'>View</a>
+              Practice 2: Setting Styles Dynamically &nbsp;| &nbsp;
+              <a href='/setting-styles-dynamically'>View</a>
             </li>
             <li style={styles}>
-              Practice 3: Setting Styles Dynamically &nbsp;| &nbsp;
-              <a href='/setting-styles-dynamically'>View</a>
+              Practice 3: Managing Inline Styles &nbsp;| &nbsp;
+              <a href='/managing-inline-styles'>View</a>
             </li>
           </ol>
         </div>
@@ -37,4 +37,4 @@ const Misc = () => {
   );
 };
 
-export default Misc;
+export default Notes;

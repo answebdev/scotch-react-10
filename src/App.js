@@ -5,7 +5,7 @@ import { StyleRoot } from 'radium';
 import Navigation from './components/layout/Navigation';
 
 import Home from './components/pages/Home';
-import Misc from './components/pages/Misc';
+import Notes from './components/pages/Notes';
 import One from './components/pages/One';
 import Two from './components/pages/Two';
 import Three from './components/pages/Three';
@@ -29,7 +29,7 @@ function App() {
           <div className='App'>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/misc' component={Misc} />
+              <Route exact path='/notes' component={Notes} />
               <Route
                 exact
                 path='/display-simple-data-with-jsx'

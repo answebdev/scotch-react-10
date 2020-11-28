@@ -166,7 +166,7 @@ class PracticeTwo extends Component {
       <Container>
         <div>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            Practice 2: Managing Inline Styles
+            Practice 3: Managing Inline Styles
           </h3>
           <p>
             Useful resources:
