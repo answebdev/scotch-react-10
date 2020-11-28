@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-// import Person from './Person';
+
+function yeah() {
+  Swal.fire({
+    title: 'Congratulations! You got it!',
+    width: 600,
+    padding: '3em',
+    background:
+      '#fff url(https://images.pexels.com/photos/3683056/pexels-photo-3683056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)',
+    backdrop: `
+           rgba(0,0,123,0.4)
+           url("https://thumbs.gfycat.com/ScaryMassiveGallowaycow-max-1mb.gif")
+           left top
+           no-repeat
+         `,
+  });
+}
 
 class PracticeThree extends Component {
   constructor(props) {
@@ -21,8 +36,22 @@ class PracticeThree extends Component {
 
   handleSubmit() {
     console.log('Your answer is: ' + this.state.userinput);
-    if (this.state.userinput.toLowerCase() === 'future' || 'the future') {
-      alert('Yeah!');
+    if (this.state.userinput.toLowerCase() === 'future') {
+      yeah();
+      //   Swal.fire({
+      //     title: 'Custom width, padding, background.',
+      //     width: 600,
+      //     padding: '3em',
+      //     background: '#fff url(/images/trees.png)',
+      //     backdrop: `
+      //           rgba(0,0,123,0.4)
+      //           url("../../img/Nyan-cat.gif")
+      //           left top
+      //           no-repeat
+      //         `,
+      //   });
+    } else if (this.state.userinput.toLowerCase() === 'the future') {
+      yeah();
     } else {
       const Toast = Swal.mixin({
         toast: true,
