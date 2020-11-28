@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { SRLWrapper } from 'simple-react-lightbox';
+import '../styles/PracticeThree.css';
 import input1 from '../../img/input01.png';
 import input2 from '../../img/input02.png';
 import input3 from '../../img/input03.png';
@@ -83,16 +84,40 @@ class PracticeThree extends Component {
       font: 'inherit',
       fontSize: '20px',
       border: '2px solid blue',
-      padding: '8px',
+      padding: '8px 25px',
       cursor: 'pointer',
     };
+
+    // Setting class names dynamically.
+    // These class names ('blue' and 'prize') are already in a separate CSS file.
+    // Create an empty array.
+    // When a certain condition is met (this.state.userinput.length === 2),
+    // then this wil push the particular class name into the array (in this case, 'blue').
+    // When the second condition is met (this.state.userinput.length > 5),
+    // then this will push the other class name into the array ('prize'), so that you now have two items in the array.
+
+    // Down below in the paragraph, we assign it: <p className={classes.join(' ')}>
+    // Give the <p> a className of 'classes' (the name of this array).
+    // And since this is an array, we need to pass a string.
+    // And to do this, we can simply call 'join' with an empty space in between (' ') when we assign it to 'classes'
+    // (another way to do this would be do call 'join' here with our if statements, and then store it in a variable).
+    // Now, the className will have these two names, so that essentially, it will be: className = 'blue prize', which is what we want.
+    // The styles of these two classes should now be applied.
+    const classes = [];
+    if (this.state.userinput.length === 2) {
+      classes.push('blue'); // classes = ['blue']
+    }
+    if (this.state.userinput.length > 5) {
+      classes.push('prize'); // prizes = ['blue', 'prize']
+    }
 
     return (
       <Container>
         <div>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            Practice 3: Setting Styles Dynamically
+            Practice 3: Setting Class Names Dynamically
           </h3>
+
           <p>
             Useful resources:
             <ul>
@@ -110,7 +135,7 @@ class PracticeThree extends Component {
           </p>
           <hr />
           <h4>Lorem Ipsum</h4>
-          <p>
+          <p className={classes.join(' ')}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -130,7 +155,7 @@ class PracticeThree extends Component {
               What is always in front of you but can’t be seen?
             </p>
           </div>
-          <div style={{ marginBottom: '40px' }}>
+          <div style={{ marginBottom: '0' }}>
             {/* Wrap everything in a form with Submit handler to be able to submit by pressin ENTER */}
             <form onSubmit={handleEnterSubmit}>
               <input

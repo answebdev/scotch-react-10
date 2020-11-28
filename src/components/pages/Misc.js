@@ -27,8 +27,8 @@ const Misc = () => {
               <a href='/managing-inline-styles'>View</a>
             </li>
             <li style={styles}>
-              Practice 3: Setting Styles Dynamically &nbsp;| &nbsp;
-              <a href='/setting-styles-dynamically'>View</a>
+              Practice 3: Setting Class Names Dynamically &nbsp;| &nbsp;
+              <a href='/setting-class-names-dynamically'>View</a>
             </li>
           </ol>
         </div>
