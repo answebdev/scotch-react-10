@@ -16,6 +16,7 @@ import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
 import PracticeOne from './components/pages/PracticeOne';
 import PracticeTwo from './components/pages/PracticeTwo';
+import PracticeThree from './components/pages/PracticeThree';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import './App.css';
 
@@ -66,6 +67,11 @@ function App() {
                 exact
                 path='/managing-inline-styles'
                 component={PracticeTwo}
+              />
+              <Route
+                exact
+                path='/setting-styles-dynamically'
+                component={PracticeThree}
               />
             </Switch>
           </div>
