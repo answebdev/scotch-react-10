@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
+import { SRLWrapper } from 'simple-react-lightbox';
+import input1 from '../../img/input01.png';
+import input2 from '../../img/input02.png';
+import input3 from '../../img/input03.png';
+import input4 from '../../img/input04.png';
+import input5 from '../../img/input05.png';
 
 function yeah() {
   Swal.fire({
@@ -38,18 +44,6 @@ class PracticeThree extends Component {
     console.log('Your answer is: ' + this.state.userinput);
     if (this.state.userinput.toLowerCase() === 'future') {
       yeah();
-      //   Swal.fire({
-      //     title: 'Custom width, padding, background.',
-      //     width: 600,
-      //     padding: '3em',
-      //     background: '#fff url(/images/trees.png)',
-      //     backdrop: `
-      //           rgba(0,0,123,0.4)
-      //           url("../../img/Nyan-cat.gif")
-      //           left top
-      //           no-repeat
-      //         `,
-      //   });
     } else if (this.state.userinput.toLowerCase() === 'the future') {
       yeah();
     } else {
@@ -64,16 +58,19 @@ class PracticeThree extends Component {
           toast.addEventListener('mouseleave', Swal.resumeTimer);
         },
       });
-
       Toast.fire({
         icon: 'error',
         title: 'Sorry. Try again',
       });
     }
-    //Send state to the server code
   }
 
   render() {
+    const handleEnterSubmit = (event) => {
+      event.preventDefault();
+      console.log('Answer submitted with ENTER.');
+    };
+
     const inputStyle = {
       border: '2px solid blue',
       fontSize: '18px',
@@ -134,24 +131,139 @@ class PracticeThree extends Component {
             </p>
           </div>
           <div style={{ marginBottom: '40px' }}>
-            <input
-              style={inputStyle}
-              placeholder='Your answer'
-              type='text'
-              onChange={this.updateInput}
-            ></input>
-            {/* <input
-              style={style}
-              type='submit'
-              onClick={this.handleSubmit}
-            ></input> */}
-            <button
-              style={buttonStyle}
-              type='submit'
-              onClick={this.handleSubmit}
-            >
-              Submit
-            </button>
+            {/* Wrap everything in a form with Submit handler to be able to submit by pressin ENTER */}
+            <form onSubmit={handleEnterSubmit}>
+              <input
+                style={inputStyle}
+                placeholder='Your answer'
+                type='text'
+                onChange={this.updateInput}
+              ></input>
+
+              <button
+                style={buttonStyle}
+                type='submit'
+                onClick={this.handleSubmit}
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div>
+            <h4>Mini Lesson</h4>
+            <p>
+              Here is a simple input field with a submit button. It has an{' '}
+              <strong>onClick</strong> event on the submit button.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={input1}
+                    alt='Basic Input Field'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <p>
+              This is the <strong>handleSubmit</strong> function. This is what
+              happens when the submit button is clicked.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={input3}
+                    alt='Basic Input Field'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <p>
+              And this is what it looks like in the browser. At this point, a
+              user can only submit an answer only when the submit button is
+              clicked. However, you may want a user to also be able to submit an
+              answer when ENTER is clicked.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={input2}
+                    alt='Basic Input Field'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <p>
+              To add this functionality, simply wrap everything (i.e. the input
+              and the button) in a form (lines 135, 150), and add an{' '}
+              <strong>onSubmit</strong> event to the form.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={input4}
+                    alt='Basic Input Field'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <p>
+              Next, write the function for the <strong>onSubmit</strong>. All
+              you need to do is add an <strong>event.preventDefault().</strong>{' '}
+              In this example, we have a class-based component, so unlike the{' '}
+              <strong>handleSubmit()</strong>, which goes <em>outside</em> of
+              the <strong>render</strong> method (so above this{' '}
+              <strong>render</strong> method, but <em>after</em> the{' '}
+              <strong>class PracticeThree extends Component</strong>), our{' '}
+              <strong>handleEnterSubmit()</strong> goes <em>inside</em> the{' '}
+              <strong>render</strong> method. And that's all you need to do. The
+              user can now submit their answer using the ENTER key, as well as
+              by clicking the submit button.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={input5}
+                    alt='Basic Input Field'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <br />
           </div>
         </div>
       </Container>
