@@ -52,9 +52,10 @@ class PracticeThree extends Component {
 
   handleSubmit() {
     console.log('Your answer is: ' + this.state.userinput);
-    if (this.state.userinput.toLowerCase() === 'future') {
-      yeah();
-    } else if (this.state.userinput.toLowerCase() === 'the future') {
+    if (
+      this.state.userinput.toLowerCase() === 'future' ||
+      this.state.userinput.toLowerCase() === 'the future'
+    ) {
       yeah();
     } else {
       const Toast = Swal.mixin({
