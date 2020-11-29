@@ -9,6 +9,7 @@ import button5 from '../../img/button05.png';
 import button6 from '../../img/button06.png';
 import button7 from '../../img/button07.png';
 import button8 from '../../img/button08.png';
+import button9 from '../../img/button09.png';
 import styled from 'styled-components';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
@@ -398,10 +399,33 @@ class TopicFour extends Component {
             </Row>
             <br />
             <p>
-              And that's how we use the Styled Components library. And of
-              course, you can also create and store styled components as their
-              own components in their own separate files, and then reuse them
-              across multiple files as you would do with regular components.
+              And that's how we use the Styled Components library. Note too that
+              we can still add onClicks, or any other events (line 115). And
+              that's because this button component, which is created by the
+              Styled Components package, has all the normal props every button
+              has. So onClick, and so on, are still available there.
+            </p>
+            <Row>
+              <Col md={6}>
+                <SRLWrapper>
+                  <img
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      cursor: 'pointer',
+                    }}
+                    src={button9}
+                    alt='Styled Button Component with onClick Event'
+                  />
+                </SRLWrapper>
+              </Col>
+            </Row>
+            <br />
+            <p>
+              And of course, you can also create and store styled components as
+              their own components in their own separate files, and then reuse
+              them across multiple files as you would do with regular
+              components.
             </p>
           </p>
           <br />
