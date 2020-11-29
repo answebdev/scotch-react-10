@@ -30,6 +30,10 @@ const Notes = () => {
               Topic 3: Managing Inline Styles &nbsp;| &nbsp;
               <a href='/managing-inline-styles'>View</a>
             </li>
+            <li style={styles}>
+              Topic 4: Styled Components &nbsp;| &nbsp;
+              <a href='/styled-components'>View</a>
+            </li>
           </ol>
         </div>
       </div>

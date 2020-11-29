@@ -148,7 +148,7 @@ input:first-child {
   margin-right: 20px;
 }
 
-button {
+/* button {
   padding: 30px 40px;
   font-size: 30px;
   border-radius: 20px 40px;
@@ -157,7 +157,7 @@ button {
   margin-bottom: 50px;
   color: #d7cbf7;
   cursor: pointer;
-}
+} */
 
 #total {
   font-size: 150px;
@@ -182,7 +182,7 @@ button {
   transition: 0.3s cubic-bezier(0.56, 0.2, 0.46, 1.27) all;
 }
 
-button {
+/* button {
   margin-top: 40px;
   padding: 20px 40px;
   background: #049ad7;
@@ -190,7 +190,7 @@ button {
   font-size: 40px;
   border-radius: 10px;
   border: none;
-}
+} */
 
 /* DAY SEVEN STYLES */
 .Api {
@@ -297,3 +297,45 @@ button {
   font-size: 80px;
   font-weight: bold;
 }
+
+/* Prism Line Number Plugin */
+pre[data-number] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-number {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em; /* Same as .prism's padding-top */
+  background: transparent;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+.line-number:before,
+.line-number[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  color: #999;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  border: 0;
+}
+
+.line-number[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+/* End Prism Line Number Plugin */

@@ -21,12 +21,11 @@ import meow from '../../audio/meow.mp3';
 import wrong from '../../audio/wrong.mp3';
 
 function yeah() {
-  // Play Cat Audio when Launch Button is Clicked
+  // Play Cat Audio
   // Source: https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js
   const audioEl = document.getElementsByClassName('audio-element')[0];
   audioEl.play();
   // End Audio Script
-
   Swal.fire({
     title: 'Congratulations! You got it!',
     width: 600,
@@ -66,8 +65,9 @@ class TopicThree extends Component {
     ) {
       yeah();
     } else {
-      // Play Wrong Audio when Launch Button is Clicked
+      // Play Wrong Audio
       // Source: https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js
+      // Note: Since this is the second time using this, we need to use [1]. If we use [0] like above, it will not work.
       const audioEl = document.getElementsByClassName('audio-element')[1];
       audioEl.play();
       // End Audio Script
@@ -199,6 +199,7 @@ class TopicThree extends Component {
                   Submit
                 </button>
               </form>
+
               {/* Audio Source: http://www.orangefreesounds.com/cat-meow-audio-clip/ */}
               <div>
                 <audio className='audio-element'>
