@@ -133,7 +133,7 @@ class PracticeThree extends Component {
       <Container>
         <div>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            Practice 2: Setting Styles Dynamically
+            Topic 2: Setting Styles Dynamically
           </h3>
 
           <p>

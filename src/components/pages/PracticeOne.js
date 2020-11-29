@@ -27,7 +27,7 @@ class PracticeOne extends Component {
       <Container>
         <div>
           <h3 style={{ marginTop: '40px', marginBottom: '20px' }}>
-            Practice 1: Input Field
+            Topic 1: Input Field
           </h3>
           <p>
             Since we are using state here, as well as{' '}

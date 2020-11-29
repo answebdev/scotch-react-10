@@ -19,15 +19,15 @@ const Notes = () => {
           </h2>
           <ol>
             <li style={styles}>
-              Practice 1: Input Field &nbsp;| &nbsp;
+              Topic 1: Input Field &nbsp;| &nbsp;
               <a href='/input-field'>View</a>
             </li>
             <li style={styles}>
-              Practice 2: Setting Styles Dynamically &nbsp;| &nbsp;
+              Topic 2: Setting Styles Dynamically &nbsp;| &nbsp;
               <a href='/setting-styles-dynamically'>View</a>
             </li>
             <li style={styles}>
-              Practice 3: Managing Inline Styles &nbsp;| &nbsp;
+              Topic 3: Managing Inline Styles &nbsp;| &nbsp;
               <a href='/managing-inline-styles'>View</a>
             </li>
           </ol>
