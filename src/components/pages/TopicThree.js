@@ -175,10 +175,7 @@ class TopicThree extends Component {
               Riddle
             </h4>
             <div style={{ marginBottom: '0' }}>
-              <p
-                className={classes.join(' ')}
-                style={{ marginBottom: '-10px' }}
-              >
+              <p className={classes.join(' ')}>
                 What is always in front of you but can’t be seen?
               </p>
             </div>
