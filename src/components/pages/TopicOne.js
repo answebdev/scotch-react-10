@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import input from '../../img/input.gif';
-import inputVid from '../../img/input.mp4';
+// import inputVid from '../../img/input.mp4';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 
@@ -196,7 +196,11 @@ class TopicOne extends Component {
           <br />
           <p>
             And now we need to create our <strong>inputHandler,</strong> which
-            we'll add up above after our state (lines 5-7).
+            we'll add up above after our state (lines 5-7). Note that because we
+            have a class-based component here, we are able to use{' '}
+            <strong>setState()</strong> (as opposed to if we had a functional
+            component, in which case we would not be able to use{' '}
+            <strong>setState()</strong>).
           </p>
           <p>
             <pre>
