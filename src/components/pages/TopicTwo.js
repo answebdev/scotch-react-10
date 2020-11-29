@@ -11,7 +11,7 @@ import styleRoot from '../../img/style-root.png';
 
 // We also need to export Radium down below in the 'export default' (see below).
 import Radium from 'radium';
-import '../styles/PracticeTwo.css';
+import '../styles/TopicTwo.css';
 
 const style1 = {
   fontSize: '20px',
@@ -75,7 +75,7 @@ const queryStyle = {
   },
 };
 
-class PracticeTwo extends Component {
+class TopicTwo extends Component {
   clickHandler1 = () => {
     Swal.fire({
       title: "Thank you for clicking. Isn't this nice?",
@@ -447,4 +447,4 @@ class PracticeTwo extends Component {
 // Here, the Radium component is wrapping our 'PracticeTwo' component, adding or injecting, some extra functionality,
 // in this case, some extra syntax which will parse our styles and understand some extra features that we can now use.
 // We can do this with both class-based components and functional components.
-export default Radium(PracticeTwo);
+export default Radium(TopicTwo);

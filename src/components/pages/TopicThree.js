@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { SRLWrapper } from 'simple-react-lightbox';
-import '../styles/PracticeThree.css';
+import '../styles/TopicThree.css';
 import style1 from '../../img/style01.png';
 import style2 from '../../img/style02.png';
 import style3 from '../../img/style03.png';
@@ -17,8 +17,16 @@ import input2 from '../../img/input02.png';
 import input3 from '../../img/input03.png';
 import input4 from '../../img/input04.png';
 import input5 from '../../img/input05.png';
+import meow from '../../audio/meow.mp3';
+import wrong from '../../audio/wrong.mp3';
 
 function yeah() {
+  // Play Cat Audio when Launch Button is Clicked
+  // Source: https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js
+  const audioEl = document.getElementsByClassName('audio-element')[0];
+  audioEl.play();
+  // End Audio Script
+
   Swal.fire({
     title: 'Congratulations! You got it!',
     width: 600,
@@ -34,7 +42,7 @@ function yeah() {
   });
 }
 
-class PracticeThree extends Component {
+class TopicThree extends Component {
   constructor(props) {
     super(props);
 
@@ -58,6 +66,11 @@ class PracticeThree extends Component {
     ) {
       yeah();
     } else {
+      // Play Wrong Audio when Launch Button is Clicked
+      // Source: https://coderrocketfuel.com/article/how-to-play-a-mp3-sound-file-in-react-js
+      const audioEl = document.getElementsByClassName('audio-element')[1];
+      audioEl.play();
+      // End Audio Script
       const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -186,6 +199,18 @@ class PracticeThree extends Component {
                   Submit
                 </button>
               </form>
+              {/* Audio Source: http://www.orangefreesounds.com/cat-meow-audio-clip/ */}
+              <div>
+                <audio className='audio-element'>
+                  <source src={meow}></source>
+                </audio>
+              </div>
+              {/* Audio Source: http://freesoundeffect.net/sound/bad-answer-01-sound-effect */}
+              <div>
+                <audio className='audio-element'>
+                  <source src={wrong}></source>
+                </audio>
+              </div>
             </div>
             <hr />
             <h4>Using the Ternary Operator</h4>
@@ -526,4 +551,4 @@ class PracticeThree extends Component {
   }
 }
 
-export default PracticeThree;
+export default TopicThree;

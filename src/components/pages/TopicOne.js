@@ -13,7 +13,7 @@ const style2 = {
   fontSize: '24px',
 };
 
-class PracticeOne extends Component {
+class TopicOne extends Component {
   state = {
     userInput: '',
   };
@@ -87,4 +87,4 @@ class PracticeOne extends Component {
   }
 }
 
-export default PracticeOne;
+export default TopicOne;

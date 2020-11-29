@@ -14,9 +14,9 @@ import Five from './components/pages/Five';
 import Six from './components/pages/Six';
 import Seven from './components/pages/Seven';
 import Eight from './components/pages/Eight';
-import PracticeOne from './components/pages/PracticeOne';
-import PracticeTwo from './components/pages/PracticeTwo';
-import PracticeThree from './components/pages/PracticeThree';
+import TopicOne from './components/pages/TopicOne';
+import TopicTwo from './components/pages/TopicTwo';
+import TopicThree from './components/pages/TopicThree';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import './App.css';
 
@@ -62,16 +62,16 @@ function App() {
                 path='/recreate-layout-with-components'
                 component={Eight}
               />
-              <Route exact path='/input-field' component={PracticeOne} />
+              <Route exact path='/input-field' component={TopicOne} />
               <Route
                 exact
                 path='/managing-inline-styles'
-                component={PracticeTwo}
+                component={TopicTwo}
               />
               <Route
                 exact
                 path='/setting-styles-dynamically'
-                component={PracticeThree}
+                component={TopicThree}
               />
             </Switch>
           </div>
