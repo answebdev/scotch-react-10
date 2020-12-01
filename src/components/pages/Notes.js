@@ -34,6 +34,13 @@ const Notes = () => {
               Topic 4: Styled Components &nbsp;| &nbsp;
               <a href='/styled-components'>View</a>
             </li>
+            <li style={styles}>
+              Topic 5: Setting Styles Dynamically with Styled Components &nbsp;|
+              &nbsp;
+              <a href='/setting-styles-dynamically-with-styled-components'>
+                View
+              </a>
+            </li>
           </ol>
         </div>
       </div>

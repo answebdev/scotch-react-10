@@ -18,6 +18,7 @@ import TopicOne from './components/pages/TopicOne';
 import TopicTwo from './components/pages/TopicTwo';
 import TopicThree from './components/pages/TopicThree';
 import TopicFour from './components/pages/TopicFour';
+import TopicFive from './components/pages/TopicFive';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import './App.css';
 
@@ -75,6 +76,11 @@ function App() {
                 component={TopicThree}
               />
               <Route exact path='/styled-components' component={TopicFour} />
+              <Route
+                exact
+                path='/setting-styles-dynamically-with-styled-components'
+                component={TopicFive}
+              />
             </Switch>
           </div>
         </Router>
