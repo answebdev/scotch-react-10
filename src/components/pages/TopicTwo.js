@@ -249,7 +249,7 @@ class TopicTwo extends Component {
             >
               Radium
             </a>{' '}
-            to add this functionality to our apllication. Radium allows us to
+            to add this functionality to our application. Radium allows us to
             use inline styles with pseudo selectors and media queries.
           </p>
           <p>
