@@ -14,7 +14,7 @@ const Notes = () => {
         </h3>
         <hr />
         <div style={{ textAlign: 'left' }}>
-          <h2>
+          <h2 data-test='notes-component'>
             <strong>Projects</strong>
           </h2>
           <ol>
@@ -40,6 +40,10 @@ const Notes = () => {
               <a href='/setting-styles-dynamically-with-styled-components'>
                 View
               </a>
+            </li>
+            <li style={styles}>
+              Topic 6: Using Jest to Test React Hooks &nbsp;| &nbsp;
+              <a href='/using-jest-to-test-react-hooks'>View</a>
             </li>
           </ol>
         </div>

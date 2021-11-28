@@ -19,8 +19,18 @@ import TopicTwo from './components/pages/TopicTwo';
 import TopicThree from './components/pages/TopicThree';
 import TopicFour from './components/pages/TopicFour';
 import TopicFive from './components/pages/TopicFive';
+import TopicSix from './components/pages/TopicSix';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import './App.css';
+
+// For testing (see App.test.js)
+export const add = (x, y) => {
+  return x + y;
+};
+
+export const total = (shipping, subTotal) => {
+  return '$' + add(shipping, subTotal);
+};
 
 function App() {
   return (
@@ -28,7 +38,7 @@ function App() {
       <SimpleReactLightbox>
         <Router>
           <Navigation />
-          <div className='App'>
+          <div data-test='component-app' className='App'>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/notes' component={Notes} />
@@ -80,6 +90,11 @@ function App() {
                 exact
                 path='/setting-styles-dynamically-with-styled-components'
                 component={TopicFive}
+              />
+              <Route
+                exact
+                path='/using-jest-to-test-react-hooks'
+                component={TopicSix}
               />
             </Switch>
           </div>

@@ -1,0 +1,16 @@
+.MainInput {
+  background-color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  border-color: salmon;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.SubmitBtn {
+  background-color: salmon;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}

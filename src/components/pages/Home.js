@@ -4,7 +4,10 @@ import { Container } from 'react-bootstrap';
 const Home = () => {
   return (
     <Container>
-      <div style={{ marginTop: '40px', textAlign: 'center' }}>
+      <div
+        data-test='home-component'
+        style={{ marginTop: '40px', textAlign: 'center' }}
+      >
         <h3>
           <strong>Scotch React Challenges</strong>
         </h3>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import { SRLWrapper } from 'simple-react-lightbox';
-import '../styles/TopicFive.css';
+import styled from 'styled-components';
+// import '../styles/TopicFive.css';
 // import style1 from '../../img/style01.png';
 
 function yeah() {
@@ -20,6 +20,31 @@ function yeah() {
          `,
   });
 }
+
+const StyledInput = styled.input`
+  border: 1px solid steeleblue;
+  font-size: 18px;
+  text-align: left;
+  background-color: ${(props) => (props.alt === 5 ? 'black' : 'red')}
+  border-radius: 5px;
+`;
+
+// const StyledButton = styled.button`
+//   border: none;
+//   background-color: ${(props) => (props.alt ? 'black' : 'steeleblue')}
+//   color: white;
+//   padding: 8px 25px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 20px;
+//   border-radius: 5px;
+//   &:hover {
+//     background-color: #ffffff;
+//     color: steelblue;
+//     border: 1px solid steelblue;
+//   }
+// `;
 
 class TopicFive extends Component {
   constructor(props) {
@@ -66,13 +91,13 @@ class TopicFive extends Component {
       console.log('Answer submitted with ENTER.');
     };
 
-    const inputStyle = {
-      border: '1px solid steeleblue',
-      fontSize: '18px',
-      textAlign: 'left',
-      backgroundColor: '#ffffff',
-      borderRadius: '5px',
-    };
+    // const inputStyle = {
+    //   border: '1px solid steeleblue',
+    //   fontSize: '18px',
+    //   textAlign: 'left',
+    //   backgroundColor: '#ffffff',
+    //   borderRadius: '5px',
+    // };
 
     const buttonStyle = {
       backgroundColor: 'steelblue',
@@ -124,12 +149,18 @@ class TopicFive extends Component {
             <div style={{ marginBottom: '0' }}>
               {/* Wrap everything in a form with Submit handler to be able to submit by pressin ENTER */}
               <form onSubmit={handleEnterSubmit}>
-                <input
+                {/* <input
                   style={inputStyle}
                   placeholder='Your answer'
                   type='text'
                   onChange={this.updateInput}
-                ></input>
+                ></input> */}
+                <StyledInput
+                  alt={this.state.userinput}
+                  placeholder='Your answer'
+                  type='text'
+                  onChange={this.updateInput}
+                />
                 <button
                   style={buttonStyle}
                   type='submit'
@@ -137,13 +168,20 @@ class TopicFive extends Component {
                 >
                   Submit
                 </button>
+                {/* <StyledButton
+                  alt={this.state.userinput.length === 5}
+                  type='submit'
+                  onClick={this.handleSubmit}
+                >
+                  Submit
+                </StyledButton> */}
               </form>
             </div>
             <hr />
-            <h4>Using the Ternary Operator</h4>
+            <h4>Using Styled Components</h4>
             <p>
-              One way to set styles dynamically is to use the ternary operator.
-              Let's say, for example...
+              Let's say we want to change styles conditionally when using Styled
+              Components.
             </p>
             <br />
             <br />
