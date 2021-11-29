@@ -33,21 +33,6 @@ const Notes = () => {
           name='description'
           content='An assortment of notes related to React.'
         />
-
-        <meta property='twitter:card' content='summary_large_image' />
-        <meta
-          property='twitter:url'
-          content='https://scotch10.netlify.app/notes/'
-        />
-        <meta property='twitter:title' content='Scotch 10 | Notes' />
-        <meta
-          property='twitter:description'
-          content='An assortment of notes related to React.'
-        />
-        <meta
-          property='twitter:image'
-          content='/static/media/og.db0ff2c5.png'
-        />
       </MetaTags>
 
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
