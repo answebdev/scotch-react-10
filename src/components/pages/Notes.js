@@ -1,5 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
+import ogimage from '../../img/og.png';
 
 const Notes = () => {
   const styles = {
@@ -8,6 +10,27 @@ const Notes = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Scotch 10 | Notes</title>
+
+        <meta property='og:image' content={ogimage} />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:width' content='1024' />
+        <meta property='og:image:height' content='1024' />
+        <meta property='og:type' content='article' />
+        <meta property='og:url' content='https://scotch10.netlify.app/notes/' />
+        <meta property='og:title' content='Scotch 10 | Notes' />
+        <meta
+          property='og:description'
+          content='An assortment of notes related to React.'
+        />
+
+        <meta
+          name='description'
+          content='An assortment of notes related to React.'
+        />
+      </Helmet>
+
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
         <h3>
           <strong>React Notes</strong>
