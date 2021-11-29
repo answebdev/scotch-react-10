@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
 import ogimage from '../../img/og.png';
 
+import MetaTags from 'react-meta-tags';
+
 const Notes = () => {
   const styles = {
     fontSize: '16px',
@@ -12,7 +14,9 @@ const Notes = () => {
     <Container>
       <Helmet>
         <title>Scotch 10 | Notes</title>
+      </Helmet>
 
+      <MetaTags>
         <meta property='og:image' content={ogimage} />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='1024' />
@@ -29,7 +33,7 @@ const Notes = () => {
           name='description'
           content='An assortment of notes related to React.'
         />
-      </Helmet>
+      </MetaTags>
 
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
         <h3>
