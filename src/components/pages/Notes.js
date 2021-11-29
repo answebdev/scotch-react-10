@@ -44,7 +44,10 @@ const Notes = () => {
           property='twitter:description'
           content='An assortment of notes related to React.'
         />
-        <meta property='twitter:image' content={ogimage} />
+        <meta
+          property='twitter:image'
+          content='/static/media/og.db0ff2c5.png'
+        />
       </MetaTags>
 
       <div style={{ marginTop: '40px', textAlign: 'center' }}>
