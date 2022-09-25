@@ -44,7 +44,7 @@ const Notes = () => {
           <h2 data-test='notes-component'>
             <strong>Projects</strong>
           </h2>
-          <ol>
+          <ol style={{ lineHeight: '2' }}>
             <li style={styles}>
               Topic 1: Input Field &nbsp;| &nbsp;
               <a href='/input-field'>View</a>
