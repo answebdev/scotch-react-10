@@ -5,6 +5,7 @@ import '../styles/TopicSeven.css';
 const TopicSeven = () => {
   const [isActive, setActive] = useState('false');
   const [myStyle, setMyStyle] = useState(false);
+  const [toggleStyle, setToggleStyle] = useState(false);
   const [episode, setEpisodes] = useState([]);
   const url = `https://the-twilight-zone-api.vercel.app/episodes`;
 
@@ -18,7 +19,7 @@ const TopicSeven = () => {
       .then((res) => res.json())
       .then((data) => {
         setEpisodes(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -32,6 +33,13 @@ const TopicSeven = () => {
   const handleClick2 = (id) => {
     setMyStyle((prevState) => ({
       ...myStyle,
+      [id]: !prevState[id],
+    }));
+  };
+
+  const handleClick3 = (id) => {
+    setToggleStyle((prevState) => ({
+      ...toggleStyle,
       [id]: !prevState[id],
     }));
   };
@@ -167,11 +175,11 @@ const TopicSeven = () => {
                       <p>
                         <strong>Details</strong>
                         <div
-                          onClick={() => handleClick2(item.id)}
+                          onClick={() => handleClick3(item.id)}
                           style={{ float: 'right', cursor: 'pointer' }}
                         >
                           <span>
-                            {myStyle[`${item.id}`] ? (
+                            {toggleStyle[`${item.id}`] ? (
                               <i class='fa-solid fa-minus'></i>
                             ) : (
                               <i class='fa-solid fa-plus'></i>
@@ -180,7 +188,9 @@ const TopicSeven = () => {
                         </div>
                       </p>
                       <p
-                        className={myStyle[`${item.id}`] ? 'style3' : 'style4'}
+                        className={
+                          toggleStyle[`${item.id}`] ? 'style3' : 'style4'
+                        }
                       >
                         <div style={{ lineHeight: '2' }}>
                           <p style={{ width: '300px', lineHeight: '1.5' }}>
