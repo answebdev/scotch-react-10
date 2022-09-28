@@ -57,16 +57,6 @@ const TopicSeven = () => {
               </a>
             </li>
             <li>
-              freeCodeCamp &nbsp;| &nbsp;
-              <a
-                href='https://forum.freecodecamp.org/t/how-to-target-single-item-in-list-with-onclick-when-mapping-in-reactjs/476622'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                View
-              </a>
-            </li>
-            <li>
               How to toggle a class in React &nbsp;| &nbsp;
               <a
                 href='https://reactgo.com/react-toggle-class/'
