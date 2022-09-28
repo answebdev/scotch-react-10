@@ -1,5 +1,5 @@
 // Data export
-export default [
+const userData = [
   {
     name: '😃 William',
     location: '🏘️ Lagos',
@@ -26,3 +26,5 @@ export default [
     car: '🚘 Mercedes',
   },
 ];
+
+export default userData;
