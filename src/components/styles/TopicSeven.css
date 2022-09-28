@@ -6,3 +6,13 @@
   width: 18rem;
   background-color: tomato;
 }
+
+.style3 {
+  width: 18rem;
+  display: block;
+}
+
+.style4 {
+  width: 18rem;
+  display: none;
+}
