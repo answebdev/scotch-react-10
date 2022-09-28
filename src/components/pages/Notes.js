@@ -42,7 +42,7 @@ const Notes = () => {
         <hr />
         <div style={{ textAlign: 'left' }}>
           <h2 data-test='notes-component'>
-            <strong>Projects</strong>
+            <strong>Notes</strong>
           </h2>
           <ol style={{ lineHeight: '2' }}>
             <li style={styles}>
