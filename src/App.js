@@ -20,6 +20,7 @@ import TopicThree from './components/pages/TopicThree';
 import TopicFour from './components/pages/TopicFour';
 import TopicFive from './components/pages/TopicFive';
 import TopicSix from './components/pages/TopicSix';
+import TopicSeven from './components/pages/TopicSeven';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import './App.css';
 
@@ -95,6 +96,11 @@ function App() {
                 exact
                 path='/using-jest-to-test-react-hooks'
                 component={TopicSix}
+              />
+              <Route
+                exact
+                path='/targeting-a-single-item-in-a-list-with-onclick-when-mapping'
+                component={TopicSeven}
               />
             </Switch>
           </div>

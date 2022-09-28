@@ -72,6 +72,13 @@ const Notes = () => {
               Topic 6: Using Jest to Test React Hooks &nbsp;| &nbsp;
               <a href='/using-jest-to-test-react-hooks'>View</a>
             </li>
+            <li style={styles}>
+              Topic 7: Targeting a Single Item in a List with onClick when
+              Mapping &nbsp;| &nbsp;
+              <a href='/targeting-a-single-item-in-a-list-with-onclick-when-mapping'>
+                View
+              </a>
+            </li>
           </ol>
         </div>
       </div>
